@@ -1,0 +1,12 @@
+img(ng-src='{{poster}}')
+div {{movie.title}}
+div Year: {{movie.year}}
+div Runtime: {{movie.runtime}}
+div Critics Rating: {{movie.ratings.critics_score}}
+div Audience Rating: {{movie.ratings.audience_score}}
+div Rating: {{movie.mpaa_rating}}
+ul
+  li(ng-repeat='cast in movie.abridged_cast') {{cast.name}}
+button(ng-click='remove()')
+
+

@@ -1,4 +1,19 @@
-h3 The MEAN Stack
-ul(ng-show='mean')
-  li(ng-repeat='technology in mean') {{technology}}
+
+div(ms-locate)
+
+div(ms-weather)
+
+div(ng-repeat='person in people', cm-greeting, name='{{person.name}}', age='{{person.age}}')
+
+div(ms-clock, frequency='200')
+
+div(ng-repeat='symbol in symbols', ms-stock, symbol='{{symbol}}')
+
+div(ng-repeat='zip in zips', ms-weather, zip='{{zip}}')
+
+input(type='text', ng-model='title')
+button(ng-click='addMovie()') Add Movie
+.row
+div(ng-repeat='title in titles', ms-movies, title='{{title}}', remove='delMovie($index)')
+
 
